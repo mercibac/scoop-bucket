@@ -18,5 +18,6 @@
   "checkver": "github",
   "autoupdate": {
     "url": "https://github.com/mercibac/gig-center/releases/download/v$version/Gig-Control-Center-v$version-portable.exe#/GigControlCenter.exe"
-  }
+  },
+  "pre_install": "if (!(Test-Path \"$persist_dir\\settings.json\")) { New-Item -ItemType File \"$dir\\settings.json\" -Force | Out-Null }"
 }
